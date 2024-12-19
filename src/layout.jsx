@@ -23,9 +23,9 @@ const Layout = () => {
             {isWelcome ? (
                 <Welcome />
             ) : (
-                <div>
+                <div className='grid grid-cols-6 gap-0'>
                     <Sidebar /> {/* This component will show on all pages */}
-                    <div className="p-8">
+                    <div className="col-span-5">
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/favourites" element={<Favorites />} />

@@ -7,10 +7,9 @@ import sidebarMenuItem from "/src/db/sidebar-menu.json"
 
 export default function Sidebar(){
     const location = useLocation();
-    console.log(location);
 
     return (
-        <section className="bg-[#0D253F] h-screen sticky top-0 left-0 bottom-0 w-[274px] overflow-hidden text-white font-poppins py-8 px-14 poppins-medium shadow-custom">
+        <section className="bg-[#0D253F] h-screen col-span-1 sticky top-0 left-0 bottom-0 w-[274px] overflow-hidden text-white font-poppins py-8 px-14 poppins-medium shadow-custom">
             <div className=' w-full flex flex-col  justify-between gap-16'>
                 {/* Logo */}
                 <a href='/' className=' w-full flex items-center justify-between'>
