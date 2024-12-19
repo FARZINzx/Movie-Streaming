@@ -13,7 +13,7 @@ const Layout = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIsWelcome(false);
-        }, 2000);
+        }, 1000);
 
         return () => clearInterval(interval); // Cleanup interval on unmount
     }, []); // Run only once when the component mounts
