@@ -8,7 +8,7 @@ import Welcome from "./components/welcome";
 import Favorites from "./components/favorites";
 
 const Layout = () => {
-    const [isWelcome, setIsWelcome] = useState(false);
+    const [isWelcome, setIsWelcome] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
