@@ -1,22 +1,38 @@
+import { useState, useEffect } from "react";
 //react-router
-import {Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 //component
 import Sidebar from "./components/Sidebar";
-import Home from "./components/Home";
-import Welcome from "./components/Welcome";
-import Favorites from "./components/Favorites";
+import Home from "./components/home";
+import Welcome from "./components/welcome";
+import Favorites from "./components/favorites";
 
 const Layout = () => {
+    const [isWelcome, setIsWelcome] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsWelcome(false);
+        }, 2000);
+
+        return () => clearInterval(interval); // Cleanup interval on unmount
+    }, []); // Run only once when the component mounts
+
     return (
         <div>
-            <Sidebar /> {/* This component will show on all pages */}
-            <div className="p-8">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/welcome" element={<Welcome />} />
-                    <Route path="/favourites" element={<Favourites />} />
-                </Routes>
-            </div>
+            {isWelcome ? (
+                <Welcome />
+            ) : (
+                <div className='grid grid-cols-6 gap-0'>
+                    <Sidebar /> {/* This component will show on all pages */}
+                    <div className="col-span-5">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/favourites" element={<Favorites />} />
+                        </Routes>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
