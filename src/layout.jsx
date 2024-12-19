@@ -28,7 +28,7 @@ const Layout = () => {
                     <div className="col-span-5">
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/favourites" element={<Favorites />} />
+                            <Route path="/favorites" element={<Favorites />} />
                         </Routes>
                     </div>
                 </div>
