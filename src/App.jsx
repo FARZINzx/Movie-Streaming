@@ -1,15 +1,8 @@
-import {BrowserRouter as Router} from "react-router-dom";
 //component
-import Sidebar from "./components/Sidebar";
+import Layout from "./layout.jsx";
 
 function App() {
-
-    return (
-        <Router>
-            <Sidebar/>
-        </Router>
-    )
-
+    return <Layout/>
 }
 
 export default App

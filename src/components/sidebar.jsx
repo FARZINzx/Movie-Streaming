@@ -4,8 +4,7 @@ export default function Sidebar(){
             <h1 className="text-xl font-bold">My App</h1>
             <nav>
                 <a href="/" className="mr-4">Home</a>
-                <a href="/welcome" className="mr-4">Welcome</a>
-                <a href="/src/components/favourites" className="mr-4">Favourites</a>
+                <a href="/src/components/favorites" className="mr-4">Favourites</a>
             </nav>
         </div>
     );
