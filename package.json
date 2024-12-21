@@ -1,5 +1,6 @@
 {
   "name": "moviedb",
+  "homepage": "https://FARZINzx.github.io/Movie-Streaming/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,8 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
